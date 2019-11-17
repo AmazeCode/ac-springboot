@@ -1,0 +1,11 @@
+#城市表
+CREATE TABLE city
+(
+id bigint(20) NOT NULL auto_increment,
+province VARCHAR(20),
+city_name VARCHAR(20),
+description VARCHAR(200),
+PRIMARY key(id)
+)
+
+测试方式,启动项目打开postman,访问restful链接
