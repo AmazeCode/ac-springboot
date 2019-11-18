@@ -19,6 +19,8 @@
         <module>springboot-properties</module>
         <module>springboot-configuration</module>
         <module>springboot-restful</module>
+        <module>springboot-mybatis-plus</module>
+        <module>springboot-mybatis-generator</module>
 
     </modules>
 
