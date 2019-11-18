@@ -8,3 +8,5 @@
 
 整合第三方框架相关：
  springboot-mybatis：整合mybatis框架
+ springboot-mybatis-generator:mybatis自动生成代码
+ springboot-mybatis-plus:mybatis-plus插件使用
