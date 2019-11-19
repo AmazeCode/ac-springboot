@@ -21,6 +21,8 @@
         <module>springboot-restful</module>
         <module>springboot-mybatis-plus</module>
         <module>springboot-mybatis-generator</module>
+        <module>springboot-mail</module>
+        <module>springboot-thymeleaf</module>
 
     </modules>
 
