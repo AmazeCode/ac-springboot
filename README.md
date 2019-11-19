@@ -10,3 +10,5 @@
  springboot-mybatis：整合mybatis框架
  springboot-mybatis-generator:mybatis自动生成代码
  springboot-mybatis-plus:mybatis-plus插件使用
+ springboot-mail:整合邮件服务
+ springboot-thymeleaf:整合thymeleaf模板
