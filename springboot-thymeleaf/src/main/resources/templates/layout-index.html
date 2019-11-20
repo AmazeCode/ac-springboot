@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8"></meta>
+    <title>Index</title>
+</head>
+<body>
+    <!-- 引入模板内容，插入到标签中 -->
+    <div th:insert="layout/copyright :: copyright"></div>
+    <!-- 引入模板内容替代标签内容 -->
+    <div th:replace="layout/copyright :: copyright"></div>
+
+    <!-- 引入新创建标签 -->
+    <div th:insert="layout/copyright :: ac"></div>
+    <div th:replace="layout/copyright :: ds"></div>
+</body>
+</html>

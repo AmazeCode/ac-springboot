@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head th:replace="base :: common_header(~{::title},~{::links},~{::scripts})">
+    <!-- 参数名和html标签一致可以直接使用html标签 -->
+    <title>Fragment - Page</title>
+
+    <!-- link标签对应~{::link}可以有多个 -->
+    <th:block th:fragment="links">
+        <!--/*  在这里写额外的link标签 */-->
+        <link rel="stylesheet" th:href="@{/static/css/bootstarp-3.3.5.css}" type="text/css"/>
+    </th:block>
+
+    <th:block th:fragment="scripts">
+        <!--/*  在这里写额外的script标签 */-->
+        <script type="text/javascript" th:src="@{/static/bootstarp/bootstrap-3.3.5.min.js}"></script>
+        <script language="JavaScript">
+            function fun() {
+            }
+        </script>
+    </th:block>
+</head>
+<body>
+
+</body>
+</html>

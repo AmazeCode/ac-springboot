@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head th:fragment="common_header(title,links,scripts)">
+    <!-- 该标签对应title参数替代这里 -->
+    <title th:replace="${title}">comm title</title>
+
+    <script type="text/javascript" th:src="@{/static/js/jquery-1.12.0.min.js}"></script>
+
+    <!--/*
+    用于替换的内容，可以让调用方自定义一些links 和 scripts
+    具体实例，参考 layout-fragment.html 的 head部分
+    */-->
+    <th:block th:replace="${links}"/>
+    <th:block th:replace="${scripts}"/>
+</head>
+<body>
+
+</body>
+</html>
