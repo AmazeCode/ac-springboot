@@ -1,0 +1,43 @@
+<html xmlns:th="http://www.thymeleaf.org"  xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout" layout:decorate="/page/layout">
+<!-- layout:decorate 指定模板位置-->
+<head>
+    <title>用户列表</title>
+    <meta charset="UTF-8">
+</head>
+<body>
+    <!-- 填充layout中content的部分 -->
+    <div layout:fragment="content">
+        <table>
+            <thead>
+                <th style="text-align:center;">序号</th>
+                <th style="text-align:center;">学生id</th>
+                <th style="text-align:center;">学生姓名</th>
+                <th style="text-align:center;">学生年龄</th>
+                <th style="text-align:center">学生课程-课程列表</th>
+                <th style="text-align:center;">学生课程-课程分数</th>
+            </thead>
+            <tbody>
+                <tr th:each="entries,stat:${resultList}">
+                    <td style="text-align:center;" th:text="${stat.count}"></td>
+                    <td style="text-align:center;" th:text="${entries['sid']}"></td>
+                    <td style="text-align:center;" th:text="${entries['sname']}"><</td>
+                    <td style="text-align:center;" th:text="${entries['sage']}"></td>
+                    <!-- 写法一：
+                    <td th:text="${entries['scourse']['cname']}"></td>
+                    <td th:text="${entries['scourse']['cscore']}"></td>-->
+                    <!-- 写法二：
+                    <td th:text="*{entries['scourse']['cname']}"></td>
+                    <td th:text="*{entries['scourse']['cscore']}"></td>-->
+                    <!-- 写法三：-->
+                    <td th:object="${entries['scourse']}" style="text-align:center;">
+                        <span th:text="*{['cname']}"></span>
+                    </td>
+                    <td th:object="${entries['scourse']}" style="text-align:center;">
+                        <span th:text="*{['cscore']}"></span>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>

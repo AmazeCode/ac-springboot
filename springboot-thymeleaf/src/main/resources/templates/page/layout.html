@@ -1,15 +1,14 @@
 <!DOCTYPE html>
-<html lang="en" xmlns:th="http://www.thymeleaf.org">
-<head th:replace="/base :: common_header(~{::title},~{::links},~{::scripts})">
+<html lang="en" xmlns:th="http://www.thymeleaf.org" xmlns:layout="http://www.ultraq.net.nz/web/thymeleaf/layout">
+<!-- 说明如果有文件夹，开头一定要加/否则找不到文件例如:/page/resources 可以扩展自己引入的插件-->
+<head th:replace="/page/resources :: common_header(~{::title},~{::links},~{::scripts})">
     <!-- 参数名和html标签一致可以直接使用html标签 -->
     <title>Fragment - Page</title>
-
     <!-- link标签对应~{::link}可以有多个 -->
     <th:block th:fragment="links">
         <!--/*  在这里写额外的link标签 */-->
         <link rel="stylesheet" th:href="@{/static/bootstarp/bootstarp-3.3.5.css}" type="text/css"/>
     </th:block>
-
     <th:block th:fragment="scripts">
         <!--/*  在这里写额外的script标签 */-->
         <script type="text/javascript" th:src="@{/static/bootstarp/bootstrap-3.3.5.min.js}"></script>
@@ -20,6 +19,13 @@
     </th:block>
 </head>
 <body>
-
+<div >
+    <!-- 引入其他模板，代替现有模板内容 -->
+    <div th:replace="/page/header :: header"></div>
+    <div th:replace="/page/left :: left"></div>
+    <!-- 主题内容 -->
+    <div layout:fragment="content">content</div>
+    <div th:replace="/page/footer :: footer"></div>
+</div>
 </body>
 </html>

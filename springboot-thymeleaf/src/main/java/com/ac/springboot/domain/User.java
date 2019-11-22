@@ -1,7 +1,5 @@
 package com.ac.springboot.domain;
 
-import lombok.Data;
-
 /**
  * @Description: 用户实体
  * @author: zhangyadong
