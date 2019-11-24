@@ -25,6 +25,9 @@
         <module>springboot-mail</module>
         <module>springboot-thymeleaf</module>
         <module>springboot-servlet</module>
+        <module>springboot-redis</module>
+        <module>springboot-schedule</module>
+        <module>springboot-freemarker</module>
 
     </modules>
 

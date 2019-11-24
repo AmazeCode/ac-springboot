@@ -3,14 +3,14 @@
 <!-- 说明如果有文件夹，开头一定要加/否则找不到文件例如:/page/resources 可以扩展自己引入的插件-->
 <head th:replace="/page/resources :: common_header(~{::title},~{::links},~{::scripts})">
     <!-- 参数名和html标签一致可以直接使用html标签 -->
-    <title>Fragment - Page</title>
+    <title>主页</title>
     <!-- link标签对应~{::link}可以有多个 -->
     <th:block th:fragment="links">
-        <!--/*  在这里写额外的link标签 */-->
+        <!--/* 在这里写额外的link标签 */-->
         <link rel="stylesheet" th:href="@{/static/bootstarp/bootstarp-3.3.5.css}" type="text/css"/>
     </th:block>
     <th:block th:fragment="scripts">
-        <!--/*  在这里写额外的script标签 */-->
+        <!--/* 在这里写额外的script标签 */-->
         <script type="text/javascript" th:src="@{/static/bootstarp/bootstrap-3.3.5.min.js}"></script>
         <script language="JavaScript">
             function fun() {
