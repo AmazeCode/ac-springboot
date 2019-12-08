@@ -28,6 +28,7 @@
         <module>springboot-redis</module>
         <module>springboot-schedule</module>
         <module>springboot-freemarker</module>
+        <module>springboot-exception</module>
 
     </modules>
 
