@@ -29,6 +29,7 @@
         <module>springboot-schedule</module>
         <module>springboot-freemarker</module>
         <module>springboot-exception</module>
+        <module>springboot-zookeeper</module>
 
     </modules>
 
