@@ -16,7 +16,7 @@
         <version>1.0-SNAPSHOT</version>
     </parent>
     <properties>
-        <mysql-connector>5.1.39</mysql-connector>
+        <mysql-connector>8.0.16</mysql-connector>
     </properties>
 
     <dependencies>
